@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+.wrapper {
+  background: linear-gradient(180deg, #e715ac 0%, rgba(176, 139, 6, 0.97) 100%);
+  min-height: 100vh;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background: rgba(201, 198, 187, 0.2);
+
+  width: 350px;
+  backdrop-filter: blur(12px);
+
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+}
+
+/* display area */
+.display {
+  background: rgba(255, 255, 255, 0.566);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+  text-align: end;
+  overflow: hidden;
+
+  box-shadow: -4px 4px 10px rgba(6, 6, 6, 0.2);
+}
+
+/* button area  */
+.btn-area {
+  display: grid;
+  gap: 0.5em;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-areas:
+    "ac c div multi"
+    "seven eight nine plus"
+    "fo fi si minus"
+    "one two thr ans"
+    "dot zero zero ans";
+}
+
+.btn-area > div {
+  background: rgba(171, 126, 218, 0.9);
+}
+
+.btn-area > div {
+  background: #c4c4c4;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-radius: 2px;
+
+  box-shadow: -4px 4px 10px rgba(6, 6, 6, 0.2);
+}
+
+.btn-0 {
+  /* grid-column-start: 2; */
+  /* grid-column-end: 4; */
+  /* grid-column: 2/4; */
+  grid-area: zero;
+}
+
+.btn-ac {
+  grid-area: ac;
+}
+.btn-c {
+  grid-area: c;
+}
+.btn-div {
+  grid-area: div;
+}
+.btn-multi {
+  grid-area: multi;
+}
+.btn-7 {
+  grid-area: seven;
+}
+.btn-8 {
+  grid-area: eight;
+}
+.btn-9 {
+  grid-area: nine;
+}
+.btn-plus {
+  grid-area: plus;
+}
+.btn-4 {
+  grid-area: fo;
+}
+.btn-5 {
+  grid-area: fi;
+}
+.btn-6 {
+  grid-area: si;
+}
+.btn-minus {
+  grid-area: minus;
+}
+.btn-1 {
+  grid-area: one;
+}
+.btn-2 {
+  grid-area: two;
+}
+.btn-3 {
+  grid-area: thr;
+}
+
+.btn-dot {
+  grid-area: dot;
+}
+
+.btn-ans {
+  grid-area: ans;
+  /* grid-row: 4/6; */
+  /* grid-column: 4/5; */
+}
+
+.circle {
+  background: linear-gradient(180deg, #e30b73 0%, #e30bcd 100%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: calc(50% - 250px);
+  bottom: 20%;
+  /* z-index: -10; */
+}
